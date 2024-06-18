@@ -1,0 +1,21 @@
+pipeline{
+    agent {
+        label 'developers'
+    }
+    stages{
+        stage('hostname'){
+            steps{
+                sh '''
+                    hostname 
+                '''
+            }
+        }
+        stage('Memory'){
+            steps{
+                sh '''
+                    free -h 
+                '''
+            }
+        }
+    }
+}
