@@ -1,19 +1,19 @@
 pipeline{
     agent {
-        label 'developers'
+        label 'testers'
     }
     stages{
-        stage('hostname'){
+        stage('Server Details'){
             steps{
                 sh '''
-                    hostname 
+                    uname -a 
                 '''
             }
         }
-        stage('Memory'){
+        stage('Disk'){
             steps{
                 sh '''
-                    free -h 
+                    df -kh 
                 '''
             }
         }
