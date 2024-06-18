@@ -1,1 +1,1 @@
-# Its MIVI home
+# Its MIVI home - Developers
